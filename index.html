@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Object-Oriented Programming | COMP1073 Client-Side JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Hamburger🍔 fun🎉🎉</h1>
+    <p id="typeBurger"></p>
+    <p id="output"></p>
+
+    <script>
+        function createHamburger(type) {
+            const hamburger = {};
+            type=type.toUpperCase();
+            if (type == 'BIG MAC') {
+                
+                    hamburger.bun= 'Sub Qtr bun',
+                    hamburger.garnish= 'Lettuce and tomato',
+                    hamburger.cheese= 'Cheddar cheese',
+                    hamburger.sauce= 'Big Mac Sauce',
+                    hamburger.patty= 'Beef patty',
+                    hamburger.patties=  3,
+                    hamburger.toppings=  ['Onions', 'pickles', 'Jalapeno']
+            }
+            else if (type == 'HAMBURGER') {
+                
+                hamburger.bun= 'Normal bun',
+                hamburger.garnish= 'Lettuce and tomato',
+                hamburger.cheese= 'Mozeralla cheese',
+                hamburger.sauce= 'Creamy BBQ Sauce',
+                hamburger.patty= 'Meat patty',
+                hamburger.patties=  2,
+                hamburger.toppings=  ['Onions', 'pickles', 'olives']
+        }
+        else if (type == 'CHEESEBURGER') {
+                
+                hamburger.bun= 'Pretzel bun',
+                hamburger.garnish= 'Lettuce and tomato',
+                hamburger.cheese= 'Cottage cheese',
+                hamburger.sauce= 'Chipotle Sauce',
+                hamburger.patty= 'Meat patty',
+                hamburger.patties=  1,
+                hamburger.toppings=  ['Onions', 'olives', 'Jalapeno']
+        }
+        else if (type == 'VEGGIE BURGER') {
+                
+                hamburger.bun= 'Sesame seed bun',
+                hamburger.garnish= 'Lettuce and tomato',
+                hamburger.cheese= 'Cheddar cheese',
+                hamburger.sauce= 'Habanero Sauce',
+                hamburger.patty= 'Veggie patty',
+                hamburger.patties=  2,
+                hamburger.toppings=  ['Onions', 'noodles', 'pepper ']
+        }
+            hamburger.describe = function () {
+                output.innerHTML= `Bun: ${hamburger.bun} <br> Vegetable Garnish: ${hamburger.garnish} <br> Cheese: ${hamburger.cheese} <br> Sauce: ${hamburger.sauce} <br> Patty: ${hamburger.patty} <br> Number of patties: ${hamburger.patties} <br> Toppings: ${hamburger.toppings}`;
+            }
+
+            typeBurger.textContent = `Your Burger : ${type}`;
+            hamburger.describe();
+        }
+        const type = prompt(`Choose your Burger from [Big Mac, Hamburger, Cheeseburger, Veggie Burger] :`);
+        createHamburger(type);
+    </script>
+</body>
+
+</html>
